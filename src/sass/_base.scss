@@ -1,0 +1,49 @@
+@font-face {
+  font-family: andale-mono;
+  src: url(../fonts/andale-mono/andale-mono.ttf);
+}
+
+@font-face {
+  font-family: avenir-next;
+  src: url(../fonts/avenir-next-regular/avenir-next-regular.ttf);
+}
+
+@font-face {
+  font-family: avenir-next;
+  font-weight: bold;
+  src: url(../fonts/avenir-next-bold/avenir-next-bold.ttf);
+}
+
+$base-font-size: 24px;
+$base-line-height: 1.45;
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  line-height: $base-line-height;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  outline:none;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  flex-flow: nowrap;
+}
