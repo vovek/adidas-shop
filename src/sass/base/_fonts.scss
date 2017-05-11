@@ -1,0 +1,26 @@
+$fonts-path: "../fonts";
+
+@font-face {
+  font-family: 'andale-mono';
+  font-weight: normal;
+  src: url('#{$fonts-path}/andale-mono/andale-mono.eot');
+  src: url('#{$fonts-path}/andale-mono/andale-mono.woff2') format('woff2'),
+  url('#{$fonts-path}/andale-mono/andale-mono.woff') format('woff'),
+  url('#{$fonts-path}/andale-mono/andale-mono.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'avenir-next';
+  font-weight: normal;
+  src: url('#{$fonts-path}/avenir-next-regular/avenir-next-regular.eot');
+  src: url('#{$fonts-path}/avenir-next-regular/avenir-next-regular.woff') format('woff'),
+  url('#{$fonts-path}/avenir-next-regular/avenir-next-regular.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'avenir-next';
+  font-weight: bold;
+  src: url('#{$fonts-path}/avenir-next-bold/avenir-next-bold.eot');
+  src: url('#{$fonts-path}/avenir-next-bold/avenir-next-bold.woff') format('woff'),
+  url('#{$fonts-path}/avenir-next-bold/avenir-next-bold.svg#svgFontName') format('svg');
+}

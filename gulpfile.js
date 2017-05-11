@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('css', function() {
-    gulp.src(['./sass/main.scss','./sass/single-product.scss'])
+    gulp.src(['./src/sass/main.scss'])
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.sass({outputStyle: 'expanded'}).on('error', plugins.sass.logError))
         .pipe(plugins.autoprefixer())
@@ -14,16 +14,17 @@ gulp.task('css', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(['./sass/*.scss'], ['css']);
+    gulp.watch(['./src/sass/**/*.scss'], ['css']);
 });
 
 gulp.task('serve', function() {
     browserSync.init({
         server: {
             baseDir: './public'
-        }
+        },
+        browser: 'firefox'
     });
-    gulp.watch(['public/*.html', 'public/*.css']).on('change', browserSync.reload)
+    gulp.watch(['public/*.html', 'src/sass/**/*.scss']).on('change', browserSync.reload)
 });
 
 gulp.task('default', ['css', 'watch', 'serve']);

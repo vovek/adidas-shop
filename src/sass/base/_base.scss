@@ -1,0 +1,30 @@
+a {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  outline: none;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  flex-flow: nowrap;
+}
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  line-height: $base-line-height;
+}
