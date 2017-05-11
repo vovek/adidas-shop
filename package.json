@@ -10,6 +10,7 @@
   "author": "Vladimir Zverev <zverev@lanbilling.ru>",
   "license": "MIT",
   "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
     "browser-sync": "^2.18.8",
     "flexboxgrid": "^6.3.1",
     "gulp": "^3.9.1",

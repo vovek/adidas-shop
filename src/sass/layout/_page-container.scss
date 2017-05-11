@@ -1,0 +1,7 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint($small) {
+      flex-direction: row;
+  }
+}
