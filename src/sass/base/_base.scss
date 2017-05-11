@@ -16,9 +16,14 @@ a {
 
 
 html {
-  font-size: $base-font-size;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-body {
-  line-height: $base-line-height;
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
