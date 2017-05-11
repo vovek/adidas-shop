@@ -6,6 +6,7 @@
   background: #0e0e0e;
   color: #fff;
   @include breakpoint($small) {
+    flex-shrink: 1;
     width: 13.625em; //326px
     height: auto;
     padding: 1.5em 1em;
