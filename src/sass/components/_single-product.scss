@@ -3,8 +3,7 @@
   font-family: avenir-next;
   font-weight: bold;
   display: flex;
-  flex-direction: column;
-  flex-flow: wrap;
+  flex-flow: column nowrap;
   flex: 2 100%;
   //  padding: 26px 31px;
 }
@@ -12,11 +11,9 @@
 .product-meta-left {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-left: 26px;
-  margin-top: 31px;
+  width: 100%;
+  padding-left: 26px;
+  padding-top: 31px;
   z-index: 9;
   & .product-name {
     font-size: 64px;
@@ -34,16 +31,19 @@
     height: 75px;
     margin-top: 14px;
   }
+
+  @include breakpoint($small) {
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .product-meta-right {
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 31px;
-  margin-right: 26px;
+  flex-direction: column-reverse;
+  padding-left: 26px;
   z-index: 9;
   & .product-sale-badge {
     display: block;
@@ -57,13 +57,23 @@
     margin-top: 11px;
     line-height: 109px;
     text-align: right;
+    align-self: flex-start;
+  }
+
+  @include breakpoint($small) {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 31px;
+    padding-right: 26px;
   }
 }
 
 .product-colors {
   display: flex;
   flex-flow: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 9px 0;
   & .switch-color {

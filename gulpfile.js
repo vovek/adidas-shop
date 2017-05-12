@@ -22,7 +22,7 @@ gulp.task('serve', function() {
         server: {
             baseDir: './public'
         },
-        browser: 'firefox'
+        browser: 'firefox_dev'
     });
     gulp.watch(['public/*.html', 'src/sass/**/*.scss']).on('change', browserSync.reload)
 });
