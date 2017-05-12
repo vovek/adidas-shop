@@ -1,31 +1,75 @@
-.filter {
-  font-family: avenir-next;
-  font-weight: bold;
+.shop {
   display: flex;
-  justify-content: flex-start;
-  border-bottom: 3px solid #e7e7e7;
-  padding: 11px 24px;
+  flex-direction: column;
 }
 
-.gender-filter,
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-weight: bold;
+  padding: 0.75em 0.833em;
+  border-bottom: 3px solid #e7e7e7;
+  @include breakpoint($small) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.gender-filter {
+  display: flex;
+  align-items: center;
+  @include breakpoint($small) {
+    margin-right: 2em;
+  }
+}
+
+.filter-icon {
+  display: none;
+  width: 2.25em;
+  height: 2.292em;
+  padding: 0.458em 0.292em;
+
+  @include breakpoint($small) {
+    display: inline-block;
+    margin-right: 30px;
+    background: #ebebeb;
+
+  }
+}
+
+
+
 .size-filter {
   display: flex;
-  font-family: avenir-next;
+  align-items: center;
+  & .size-label {
+    text-transform: uppercase;
+    margin-right: 1em;
+    color: #4d42f8;
+    font-weight: bold;
+  }
 }
 
+
 .filter-button {
-  font-family: inherit;
   color: #D6D6D6;
   background: transparent;
-  margin-right: 10px;
+  margin-right: 0.5em;
   text-transform: uppercase;
   font-weight: bold;
-  line-height: 33px;
   &:focus {
     outline: 0;
   }
 }
 
+.is-active {
+  color: #4d42f8;
+}
+
+
+/*
 .gender-filter {
   & .filter-icon {
     margin-right: 30px;
@@ -53,3 +97,5 @@
 .is-active {
   color: #4d42f8;
 }
+
+*/

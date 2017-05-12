@@ -1,24 +1,40 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  background: #000;
+  height: 3em; //72px
+  padding: 0.750em 0.833em; //18px 20px
+  background: #0e0e0e;
   color: #fff;
-  max-width: 414px;
-  padding: 31px 24px;
-  align-items: center;
+  @include breakpoint($small) {
+    flex-shrink: 1;
+    width: 13.625em; //326px
+    height: auto;
+    padding: 1.5em 1em;
+  }
+  @include breakpoint($medium) {
+    width: 17.250em; //414px
+  }
 }
 
 .logo-link {
-  width: 94px;
-  height: 94px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  & .logo {
+    max-height: 1.5em;
+  }
+
+  @include breakpoint($small) {
+    max-height: 72px;
+    text-align: center;
+    width: 100%;
+  }
+  
 }
 
 .search-form {
-  margin-top: 20px;
+  display: none;
+  margin-top: 1.5em;
+  @include breakpoint($small) {
+    display: block;
+  }
 }
 
 .search-icon {
@@ -31,37 +47,34 @@
   border: 0;
   border-bottom: 4px solid;
   text-transform: uppercase;
-  padding-bottom: 10px;
+  width: 100%;
+  padding-bottom: 4px;
+  
   & :focus {
     outline: 0;
   }
 }
 
 .main-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 5.833em;
   & .nav-item {
-    margin-top: 30px;
-    line-height: 1;
-    text-decoration: none;
+    line-height: 1.5em;
     text-transform: uppercase;
     color: #303030;
     font-weight: bold;
-    font-family: avenir-next;
-    &.active {
-      color: #fff;
-    }
-    &:first-child {
-      margin-top: 0;
-    }
+    &.active,
     &:hover {
       color: #fff;
     }
     &:focus {
       outline: 0;
     }
+  }
+  @include breakpoint($small) {
+    display: flex;
   }
 }
 
@@ -73,12 +86,12 @@
 .sub-menu {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  margin-bottom: 1.5em;
   align-items: center;
   & .nav-item {
     font-weight: normal;
-    margin-top: 25px;
     font-family: andale-mono;
   }
 }

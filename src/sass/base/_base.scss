@@ -14,17 +14,16 @@ a {
   border-radius: 50%;
 }
 
-.page-container {
-  display: flex;
-  width: 100%;
-  margin: 0;
-  flex-flow: nowrap;
-}
 
 html {
-  font-size: $base-font-size;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-body {
-  line-height: $base-line-height;
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
