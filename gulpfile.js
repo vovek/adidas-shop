@@ -21,8 +21,7 @@ gulp.task('serve', function() {
     browserSync.init({
         server: {
             baseDir: './public'
-        },
-        browser: 'firefox_dev'
+        }
     });
     gulp.watch(['public/*.html', 'src/sass/**/*.scss']).on('change', browserSync.reload)
 });
